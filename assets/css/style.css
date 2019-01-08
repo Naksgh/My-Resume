@@ -2,6 +2,10 @@
 
 /*---------------------------------------------COLORS*/
 
+.bg-color-contact {
+    background-color: #ffffff;   
+}
+
 .bg-color-work-history{
     background-color: #9b59b6;
 }
@@ -345,12 +349,44 @@ footer .cv-pdf i:hover {
     margin-bottom: 30px;
 }
 
+
+/*---------------------------------------------Contact*/
+
+.contact-heading {
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    
+}
+
+.center-form {
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+button[type="submit"]{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: #e84610;
+    color: #fafafa;
+    
+}
+
 /*---------------------------------------------Media Queries*/
 @media(min-width: 992px) {
     .section-column {
     padding: 0 30px 30px;
     float: none;
     display: table-cell;
+    }
+
+    .center-form {
+    padding-top: 30px;
+    min-height: 240px;
+    margin: 0 auto;
+    max-width: 50%; 
     }
 }
 
