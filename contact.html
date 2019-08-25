@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
         (function() {
             emailjs.init("user_rXwSZorBYVRdTth7atR7b");
         })();
     </script>
-    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -61,6 +62,10 @@
                 <h3 class="contact-heading uppercase text-center">Got a project in mind?</h3>
                 <h5 class="uppercase text-center">Lets work together</h5>
             </div>
+            <div class="test">
+                <button id="map-button">click</button>
+            </div>
+            <div hidden id="map"></div>
             <div class="center-form">
 
                 <form onsubmit="return sendMail(this);" method="POST">
@@ -103,8 +108,39 @@
         </div>
 
     </footer>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 3,
+                center: {
+                    lat: 46.619261,
+                    lng: -33.134766
+                }
+            });
+
+            var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var locations = [
+                { lat: 40.785091, lng: -73.968285 },
+                { lat: 41.084045, lng: -73.874245 },
+                { lat: 40.754932, lng: -73.984016 }
+            ];
+
+            var markers = locations.map(function(location, i) {
+                return new google.maps.Marker({
+                    position: location,
+                    label: labels[i % labels.length]
+                });
+            });
+
+            var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+        }
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8aDiBpcCOkaNhc9XqOJHvU46RQlOtSLY&callback=initMap"></script>
+    <script src="assets/js/maps.js"></script>
     <script type="text/javascript" src="assets/js/sendemail.js"></script>
-  
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+
 </body>
 
 </html>
