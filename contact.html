@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
-        </script>
-        (function() {
-            emailjs.init("user_rXwSZorBYVRdTth7atR7b");
-        })();
+    </script>
+    (function() { emailjs.init("user_rXwSZorBYVRdTth7atR7b"); })();
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
@@ -62,10 +60,6 @@
                 <h3 class="contact-heading uppercase text-center">Got a project in mind?</h3>
                 <h5 class="uppercase text-center">Lets work together</h5>
             </div>
-            <div class="test">
-                <button id="map-button">click</button>
-            </div>
-            <div hidden id="map"></div>
             <div class="center-form">
 
                 <form onsubmit="return sendMail(this);" method="POST">
@@ -76,7 +70,17 @@
                 </form>
             </div>
         </div>
+        <div class="button-wrapper">
+            <h3 class="contact-heading uppercase">Press the button to view my location</h3>
+            <button class="btn btn-secondary center-block" id="map-button">View Google Map</button>
+        </div>
+        <h3 hidden class="contact-heading uppercase text-center" id="town-name">Shrewsbury UK</h3>
+        <div class="map-padding">
+            <div hidden id="map"></div>
+        </div>
     </section>
+
+
 
     <footer class="container-fluid ">
         <div id="footer-details " class="row ">
@@ -111,18 +115,17 @@
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 3,
+                zoom: 11,
                 center: {
-                    lat: 46.619261,
-                    lng: -33.134766
+                    lat: 52.707887,
+                    lng: -2.754009
                 }
             });
 
             var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             var locations = [
-                { lat: 40.785091, lng: -73.968285 },
-                { lat: 41.084045, lng: -73.874245 },
-                { lat: 40.754932, lng: -73.984016 }
+                { lat: 52.707887, lng: -2.754009 },
+
             ];
 
             var markers = locations.map(function(location, i) {

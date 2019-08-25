@@ -382,7 +382,13 @@ footer .cv-pdf i:hover {
 
 /*---------------------------------------------Contact*/
 
-.test {
+#map-button {
+    margin-bottom: 10px;
+    background-color: #008CBA;
+    color: #fafafa;
+}
+
+.button-wrapper {
     text-align: center;
 }
 
@@ -427,6 +433,12 @@ button[type="submit"] {
 
 
 /*-------------------------------------------------- Map IPA*/
+
+
+
+.map-padding {
+    padding-bottom: 10px;
+}
 
 #map {
     padding-top: 20px;
