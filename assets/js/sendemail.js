@@ -3,10 +3,11 @@ function sendMail(contactForm) {
         .then(
             function(response) {
                 console.log("success", response);
+                alert("Your message has been sent!");
             },
             function(error) {
                 console.log("error", error);
             });
-            return false;
-            
+    document.getElementById("myForm").reset();
+    return false;
 }
