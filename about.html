@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Igor Kalaciov</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("user_rXwSZorBYVRdTth7atR7b");
-        })();
-    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -57,35 +51,55 @@
             </div>
         </div>
     </header>
-
     <section class="container-fluid">
-        <div class="row bg-color-contact">
-            <div>
-                <h3 class="contact-heading uppercase text-center">Got a project in mind?</h3>
-                <h5 class="uppercase text-center">Lets work together</h5>
+        <div class="row row-table">
+            <div class="col-xs-12 col-sm-12 col-md-4 bg-color-conferences section-column">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="section-heading uppercase">Interests and hobbies</h3>
+                    </div>
+                    <div hidden id="animation">
+                        <ul class="interests-list">
+                            <li>
+                                <i class="fa fa-futbol-o" aria-hidden="true"></i> Football
+                            </li>
+                            <li>
+                                <i class="fa fa-laptop" aria-hidden="true"></i> Coding
+                            </li>
+                            <li>
+                                <i class="fa fa-gamepad" aria-hidden="true"></i> Gaming
+                            </li>
+                            <li>
+                                <i class="fa fa-globe" aria-hidden="true"></i> Languages
+                            </li>
+                            <li>
+                                <i class="fa fa-music" aria-hidden="true"></i> Guitar
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="center-form">
-
-                <form id="myForm" onsubmit="return sendMail(this);" method="POST">
-                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Project Description" required></textarea>
-                    <button type="submit" class="btn btn-secondary center-block">Send Project Request</button>
-                </form>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 bg-color-groups section-column">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="section-heading uppercase">my story</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-8 three-reasons-para text-padding">
+                                From a young age I have been passionate about computer games - always PC! This passion developed over the years and led me to explore the world of software development, as a result I taught myself simple coding as a teenager.<br><br> Whilst I never lost my passion for
+                                computers, my working career to date has been within the catering industry. I have developed a multitude of transferrable skills over my time working as a front of house team member. To list a few, I can work effectively as part of
+                                a team, I can communicate with a wide variety of individuals and I am motivated and enthuastic towards any challenge I face. <br><br>I have reached a point in my working life where I want my career to reflect my passions. As a
+                                result I enrolled on an online software development diploma, I am driven to complete this alongside working full time in catering as my current goal is to create a career in software development for myself which utilises
+                                not only the coding knowledge I am gaining daily but the transferrable skills I have honed over the past 10 years.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="button-wrapper">
-            <h3 class="contact-heading uppercase">Press the button to view my location</h3>
-            <button class="btn btn-secondary center-block" id="map-button">View Google Map</button>
-        </div>
-        <h3 hidden class="contact-heading uppercase text-center" id="town-name">Shrewsbury UK</h3>
-        <div class="map-padding">
-            <div hidden id="map"></div>
         </div>
     </section>
-
-
-
     <footer class="container-fluid ">
         <div id="footer-details " class="row ">
             <div class="col-sm-4 ">
@@ -111,38 +125,8 @@
         </div>
 
     </footer>
-    <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 11,
-                center: {
-                    lat: 52.707887,
-                    lng: -2.754009
-                }
-            });
 
-            var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            var locations = [
-                { lat: 52.707887, lng: -2.754009 },
-
-            ];
-
-            var markers = locations.map(function(location, i) {
-                return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length]
-                });
-            });
-
-            var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
-        }
-    </script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8aDiBpcCOkaNhc9XqOJHvU46RQlOtSLY&callback=initMap"></script>
-    <script src="assets/js/maps.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.js"></script>
-    <script type="text/javascript" src="assets/js/sendemail.js"></script>
-
+    <script type="text/javascript" src="assets/js/jquery2.js"></script>
 </body>
 
 </html>
