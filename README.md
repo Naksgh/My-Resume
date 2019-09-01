@@ -6,11 +6,11 @@
 
 Here are some of the things that you can accomplish on my website:
 
-*Find out my personal/contact information 
-*View course progress
-*Use the contact form to send me a message
-*View mine or other people's GitHub profiles
-*Download my CV
+* Find out my personal/contact information 
+* View course progress
+* Use the contact form to send me a message
+* View mine or other people's GitHub profiles
+* Download my CV
 
 ## Created & Mainted by Igor :+1:
 
