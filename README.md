@@ -15,11 +15,13 @@ Here are some of the things that you can accomplish on my website:
 ## Technologies used: 
 * HTML5 
 * CSS3
+* Google Maps API https://developers.google.com/maps/documentation/
+* JavaScript and jQuery library https://jquery.com/
+* EMailJS https://www.emailjs.com/
+* GitHub API https://developer.github.com/v3/
 * Bootstrap framework https://getbootstrap.com/
 * Fontawesome icons https://fontawesome.com/
 * CDNJ's hover.css library https://cdnjs.com/libraries/hover.css
-* Google Maps API https://developers.google.com/maps/documentation/
-* JavaScript and jQuery library https://jquery.com/
 
 ## Created & Mainted by Igor :+1:
 
