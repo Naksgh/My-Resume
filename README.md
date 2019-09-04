@@ -1,7 +1,7 @@
 # Igor Kalaciov's Resume Website :clipboard:
-### link https://naksgh.github.io/My-Resume/
+### link: https://naksgh.github.io/My-Resume/
 
-## What the project does & Why the project is useful :question:
+## What the project does & why the project is useful :question:
 ### This project showcases my ability to code and provides contact information for perspective collaborators and employers.  
 
 Here are some of the things that you can accomplish on my website:
@@ -23,6 +23,6 @@ Here are some of the things that you can accomplish on my website:
 * Fontawesome icons https://fontawesome.com/
 * CDNJ's hover.css library https://cdnjs.com/libraries/hover.css
 
-## Created & Mainted by Igor :+1:
+## Created & maintained by Igor :+1:
 
 
